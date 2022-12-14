@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-advanced-checkout/view/adminhtml/web/shopping_cart.js

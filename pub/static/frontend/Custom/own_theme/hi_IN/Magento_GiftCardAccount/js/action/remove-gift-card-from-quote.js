@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-gift-card-account/view/frontend/web/js/action/remove-gift-card-from-quote.js

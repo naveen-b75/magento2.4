@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/paypal/module-braintree-core/view/adminhtml/web/js/virtual.js

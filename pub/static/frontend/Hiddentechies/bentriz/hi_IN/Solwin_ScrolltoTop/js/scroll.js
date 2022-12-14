@@ -1,0 +1,1 @@
+/var/www/html/magento24/app/code/Solwin/ScrolltoTop/view/frontend/web/js/scroll.js

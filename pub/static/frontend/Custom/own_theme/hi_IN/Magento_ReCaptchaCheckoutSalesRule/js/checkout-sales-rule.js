@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-re-captcha-checkout-sales-rule/view/frontend/web/js/checkout-sales-rule.js

@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-sitemap/view/adminhtml/web/js/form-submit-loader.js

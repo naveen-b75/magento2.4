@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-page-builder/view/base/web/js/content-type/slider/appearance/default/widget.js

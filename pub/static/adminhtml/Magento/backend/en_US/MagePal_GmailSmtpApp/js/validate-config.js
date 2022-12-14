@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magepal/magento2-gmailsmtpapp/view/adminhtml/web/js/validate-config.js

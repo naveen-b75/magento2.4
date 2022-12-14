@@ -1,0 +1,1 @@
+/var/www/html/magento24/app/code/Hiddentechies/Bentriz/view/frontend/web/js/owl.carousel.js

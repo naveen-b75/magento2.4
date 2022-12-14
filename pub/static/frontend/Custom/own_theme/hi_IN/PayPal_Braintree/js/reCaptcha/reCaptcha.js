@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/paypal/module-braintree-core/view/frontend/web/js/reCaptcha/reCaptcha.js

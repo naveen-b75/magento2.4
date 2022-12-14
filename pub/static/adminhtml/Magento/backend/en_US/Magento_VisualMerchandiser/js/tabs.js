@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-visual-merchandiser/view/adminhtml/web/js/tabs.js

@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-reward/view/frontend/web/js/action/remove-points-from-summary.js

@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/mageplaza/module-core/view/adminhtml/web/js/help.js

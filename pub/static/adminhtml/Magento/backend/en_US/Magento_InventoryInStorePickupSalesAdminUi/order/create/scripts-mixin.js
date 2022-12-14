@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-inventory-in-store-pickup-sales-admin-ui/view/adminhtml/web/order/create/scripts-mixin.js

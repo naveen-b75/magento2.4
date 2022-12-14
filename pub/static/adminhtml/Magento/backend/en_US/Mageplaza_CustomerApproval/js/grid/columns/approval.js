@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/mageplaza/module-customer-approval/view/adminhtml/web/js/grid/columns/approval.js

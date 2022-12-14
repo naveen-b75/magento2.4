@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-scalable-inventory/view/adminhtml/web/js/components/deferred-stock-update.js

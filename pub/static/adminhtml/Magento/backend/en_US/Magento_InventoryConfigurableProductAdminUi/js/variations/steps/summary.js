@@ -1,0 +1,1 @@
+/var/www/html/magento24/vendor/magento/module-inventory-configurable-product-admin-ui/view/adminhtml/web/js/variations/steps/summary.js

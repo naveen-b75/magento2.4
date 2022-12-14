@@ -1,0 +1,1196 @@
+[2022-12-05T11:32:56.930055+00:00] report.CRITICAL: SoapFault exception: [HTTP] Could not connect to host in /var/www/html/magento24/vendor/magento/module-fedex/Model/Carrier.php:520
+Stack trace:
+#0 [internal function]: SoapClient->__doRequest()
+#1 /var/www/html/magento24/vendor/magento/module-fedex/Model/Carrier.php(520): SoapClient->__call()
+#2 /var/www/html/magento24/vendor/magento/module-fedex/Model/Carrier.php(546): Magento\Fedex\Model\Carrier->_doRatesRequest()
+#3 /var/www/html/magento24/vendor/magento/module-fedex/Model/Carrier.php(302): Magento\Fedex\Model\Carrier->_getQuotes()
+#4 /var/www/html/magento24/vendor/magento/module-shipping/Model/Shipping.php(335): Magento\Fedex\Model\Carrier->collectRates()
+#5 /var/www/html/magento24/vendor/magento/module-shipping/Model/Shipping.php(244): Magento\Shipping\Model\Shipping->collectCarrierRates()
+#6 /var/www/html/magento24/vendor/magento/module-quote/Model/Quote/Address.php(1077): Magento\Shipping\Model\Shipping->collectRates()
+#7 /var/www/html/magento24/vendor/magento/module-quote/Model/Quote/Address.php(1004): Magento\Quote\Model\Quote\Address->requestShippingRates()
+#8 /var/www/html/magento24/vendor/magento/module-quote/Model/ShippingMethodManagement.php(136): Magento\Quote\Model\Quote\Address->collectShippingRates()
+#9 /var/www/html/magento24/vendor/magento/module-checkout/Model/DefaultConfigProvider.php(525): Magento\Quote\Model\ShippingMethodManagement->get()
+#10 /var/www/html/magento24/vendor/magento/module-checkout/Model/DefaultConfigProvider.php(313): Magento\Checkout\Model\DefaultConfigProvider->getSelectedShippingMethod()
+#11 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(58): Magento\Checkout\Model\DefaultConfigProvider->getConfig()
+#12 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(138): Magento\Checkout\Model\DefaultConfigProvider\Interceptor->___callParent()
+#13 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Checkout\Model\DefaultConfigProvider\Interceptor->Magento\Framework\Interception\{closure}()
+#14 /var/www/html/magento24/generated/code/Magento/Checkout/Model/DefaultConfigProvider/Interceptor.php(23): Magento\Checkout\Model\DefaultConfigProvider\Interceptor->___callPlugins()
+#15 /var/www/html/magento24/vendor/magento/module-checkout/Model/CompositeConfigProvider.php(39): Magento\Checkout\Model\DefaultConfigProvider\Interceptor->getConfig()
+#16 /var/www/html/magento24/vendor/magento/module-checkout/Block/Cart/Shipping.php(84): Magento\Checkout\Model\CompositeConfigProvider->getConfig()
+#17 /var/www/html/magento24/vendor/magento/module-checkout/Block/Cart/Shipping.php(120): Magento\Checkout\Block\Cart\Shipping->getCheckoutConfig()
+#18 /var/www/html/magento24/vendor/magento/module-checkout/view/frontend/templates/cart/shipping.phtml(36): Magento\Checkout\Block\Cart\Shipping->getSerializedCheckoutConfig()
+#19 /var/www/html/magento24/vendor/magento/framework/View/TemplateEngine/Php.php(71): include('...')
+#20 /var/www/html/magento24/vendor/magento/framework/View/Element/Template.php(263): Magento\Framework\View\TemplateEngine\Php->render()
+#21 /var/www/html/magento24/vendor/magento/framework/View/Element/Template.php(293): Magento\Framework\View\Element\Template->fetchView()
+#22 /var/www/html/magento24/vendor/magento/framework/View/Element/AbstractBlock.php(1095): Magento\Framework\View\Element\Template->_toHtml()
+#23 /var/www/html/magento24/vendor/magento/framework/View/Element/AbstractBlock.php(1099): Magento\Framework\View\Element\AbstractBlock->Magento\Framework\View\Element\{closure}()
+#24 /var/www/html/magento24/vendor/magento/framework/View/Element/AbstractBlock.php(660): Magento\Framework\View\Element\AbstractBlock->_loadCache()
+#25 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(578): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#26 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(555): Magento\Framework\View\Layout->_renderBlock()
+#27 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#28 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#29 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#30 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#31 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#32 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#33 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#34 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#35 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#36 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#37 /var/www/html/magento24/vendor/magento/framework/View/Element/AbstractBlock.php(507): Magento\Framework\View\Layout->renderElement()
+#38 /var/www/html/magento24/vendor/magento/module-checkout/view/frontend/templates/cart.phtml(16): Magento\Framework\View\Element\AbstractBlock->getChildHtml()
+#39 /var/www/html/magento24/vendor/magento/framework/View/TemplateEngine/Php.php(71): include('...')
+#40 /var/www/html/magento24/vendor/magento/framework/View/Element/Template.php(263): Magento\Framework\View\TemplateEngine\Php->render()
+#41 /var/www/html/magento24/vendor/magento/framework/View/Element/Template.php(293): Magento\Framework\View\Element\Template->fetchView()
+#42 /var/www/html/magento24/vendor/magento/framework/View/Element/AbstractBlock.php(1095): Magento\Framework\View\Element\Template->_toHtml()
+#43 /var/www/html/magento24/vendor/magento/framework/View/Element/AbstractBlock.php(1099): Magento\Framework\View\Element\AbstractBlock->Magento\Framework\View\Element\{closure}()
+#44 /var/www/html/magento24/vendor/magento/framework/View/Element/AbstractBlock.php(660): Magento\Framework\View\Element\AbstractBlock->_loadCache()
+#45 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(578): Magento\Framework\View\Element\AbstractBlock->toHtml()
+#46 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(555): Magento\Framework\View\Layout->_renderBlock()
+#47 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#48 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#49 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#50 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#51 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#52 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#53 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#54 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#55 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#56 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#57 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#58 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#59 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#60 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#61 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#62 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#63 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(606): Magento\Framework\View\Layout->renderElement()
+#64 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(557): Magento\Framework\View\Layout->_renderContainer()
+#65 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(510): Magento\Framework\View\Layout->renderNonCachedElement()
+#66 /var/www/html/magento24/vendor/magento/framework/View/Layout.php(975): Magento\Framework\View\Layout->renderElement()
+#67 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(58): Magento\Framework\View\Layout->getOutput()
+#68 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(138): Magento\Framework\View\Layout\Interceptor->___callParent()
+#69 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Framework\View\Layout\Interceptor->Magento\Framework\Interception\{closure}()
+#70 /var/www/html/magento24/generated/code/Magento/Framework/View/Layout/Interceptor.php(50): Magento\Framework\View\Layout\Interceptor->___callPlugins()
+#71 /var/www/html/magento24/vendor/magento/framework/View/Result/Page.php(260): Magento\Framework\View\Layout\Interceptor->getOutput()
+#72 /var/www/html/magento24/vendor/magento/framework/View/Result/Layout.php(171): Magento\Framework\View\Result\Page->render()
+#73 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(58): Magento\Framework\View\Result\Layout->renderResult()
+#74 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(138): Magento\Framework\View\Result\Page\Interceptor->___callParent()
+#75 /var/www/html/magento24/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Framework\View\Result\Page\Interceptor->Magento\Framework\Interception\{closure}()
+#76 /var/www/html/magento24/generated/code/Magento/Framework/View/Result/Page/Interceptor.php(32): Magento\Framework\View\Result\Page\Interceptor->___callPlugins()
+#77 /var/www/html/magento24/vendor/magento/framework/App/Http.php(120): Magento\Framework\View\Result\Page\Interceptor->renderResult()
+#78 /var/www/html/magento24/vendor/magento/framework/App/Bootstrap.php(264): Magento\Framework\App\Http->launch()
+#79 /var/www/html/magento24/pub/index.php(30): Magento\Framework\App\Bootstrap->run()
+#80 {main} [] []
+[2022-12-07T12:43:17.675167+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-07T12:44:45.823592+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>20</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-07T12:45:06.531096+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-07T12:45:30.074227+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-07T12:45:36.183815+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-07T12:46:30.283568+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-07T12:46:31.776204+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-07T12:46:40.322834+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-08T07:26:01.644131+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-08T07:26:08.910269+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-08T07:26:13.878076+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-08T07:28:46.505359+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-08T07:28:53.370734+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-08T07:30:26.039171+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>10</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-13T05:00:23.717522+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>0.1</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-13T05:00:42.765676+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>0.1</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-13T05:00:51.292668+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>0.1</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-13T06:16:37.520686+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>0.1</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-13T06:18:43.983762+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>0.1</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-13T10:45:40.048163+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>0.5</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []
+[2022-12-13T10:45:44.856947+00:00] report.DEBUG: array (
+  'request' => '<?xml version="1.0"?>
+<RatingServiceSelectionRequest xml:lang="en-US">
+  <Request>
+    <TransactionReference>
+      <CustomerContext>Rating and Service</CustomerContext>
+      <XpciVersion>1.0</XpciVersion>
+    </TransactionReference>
+    <RequestAction>Rate</RequestAction>
+    <RequestOption>Shop</RequestOption>
+  </Request>
+  <PickupType>
+          <Code>01</Code>
+          <Description>Regular Daily Pickup</Description>
+  </PickupType>
+
+  <Shipment>      <Shipper>      <Address>
+          <City>Hyderabad</City>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </Shipper>
+
+    <ShipTo>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <ResidentialAddress>01</ResidentialAddress>
+          <StateProvinceCode>TG</StateProvinceCode><ResidentialAddressIndicator>01</ResidentialAddressIndicator>      </Address>
+    </ShipTo>
+
+    <ShipFrom>
+      <Address>
+          <PostalCode>500072</PostalCode>
+          <CountryCode>IN</CountryCode>
+          <StateProvinceCode>TG</StateProvinceCode>
+      </Address>
+    </ShipFrom>    <Package>
+      <PackagingType>
+        <Code>2c</Code>
+      </PackagingType>
+      <PackageWeight>
+        <UnitOfMeasurement>
+          <Code>LBS</Code>
+        </UnitOfMeasurement>
+        <Weight>0.5</Weight>
+      </PackageWeight>
+    </Package><RateInformation><NegotiatedRatesIndicator/></RateInformation><TaxInformationIndicator/>      </Shipment>
+    </RatingServiceSelectionRequest>',
+  'result' => '<?xml version="1.0"?>
+<RatingServiceSelectionResponse><Response><TransactionReference><CustomerContext>Rating and Service</CustomerContext><XpciVersion>1.0</XpciVersion></TransactionReference><ResponseStatusCode>0</ResponseStatusCode><ResponseStatusDescription>Failure</ResponseStatusDescription><Error><ErrorSeverity>Hard</ErrorSeverity><ErrorCode>250003</ErrorCode><ErrorDescription>Invalid Access License number</ErrorDescription></Error></Response></RatingServiceSelectionResponse>',
+) [] []

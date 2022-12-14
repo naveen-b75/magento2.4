@@ -1,0 +1,2 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1670929754;s:6:"expire";i:9999999999;s:4:"tags";s:40:"74a_DB_PDO_MYSQL_DDL,74a_DB_DDL,74a_MAGE";}
+"CREATE TABLE `sample_table` (\n  `ID` int unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',\n  `product` varchar(255) NOT NULL COMMENT 'Product',\n  `description` text NOT NULL COMMENT 'Description',\n  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Created_at',\n  PRIMARY KEY (`ID`)\n) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3 COMMENT='sample_table'"

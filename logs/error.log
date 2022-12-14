@@ -1,0 +1,1 @@
+[Wed Dec 14 10:21:45.543172 2022] [php:notice] [pid 5027] [client 127.0.0.1:41056] PHP   7. trim($string = NULL) /var/www/html/magento24/vendor/magento/module-media-storage/App/Media.php:151, referer: http://naveen.magento24.com/
